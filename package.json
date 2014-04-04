@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Desk.com Multipass SSO",
   "main": "index.js",
-  "repository": "git://github.com/ahn/desk-multipass.git",
-  "author": "Alex Ahn <alexahnhome@gmail.com>",
+  "repository": "git://github.com/alexahn/desk-multipass.git",
+  "author": "Alex Ahn <alex.ahn@newscred.com>",
   "license": "MIT"
 }
