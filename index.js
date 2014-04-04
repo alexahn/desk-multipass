@@ -26,6 +26,7 @@ var Desk = function(siteKey, apiKey) {
       data = new Buffer(JSON.stringify(hash));
       cipher = crypto.createCipheriv('aes-128-cbc', key, iv);
       multipass = Buffer.concat([iv, cipher.update(data, 'binary'), cipher.final()]);
+      multipass = multipass.toString('base64');
       signature = crypto.createHmac('sha1', apiKey)
         .update(multipass)
         .digest('base64');
