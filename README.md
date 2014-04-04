@@ -1,6 +1,6 @@
 ### Desk.com Multipass SSO module
 
-Simple module for Desk.com's [multipass SSO](http://dev.desk.com/guides/sso/).
+Simple module for Desk.com's [Multipass SSO](http://dev.desk.com/guides/sso/).
 
 #### Install
 
