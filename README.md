@@ -19,7 +19,7 @@ app.get('/desk', function (req, res, next) {
     expires: new Date(new Date().getTime() + (1000 * 60)),
     customer_email: 'alex.ahn@test.com',
     customer_name: 'Alex Ahn'
-  }, function (err, multipass, signature) {
+  }, function (err, hash, signature) {
     var multipassUrlObj, multipassUrl;
     if (err) return next(err);
     multipassUrlObj = {
@@ -27,7 +27,7 @@ app.get('/desk', function (req, res, next) {
       host: 'test.desk.com',
       pathname: '/customer/authentication/multipass/callback',
       query: {
-        multipass: multipass,
+        multipass: hash,
         signature: signature
       }
     };
