@@ -23,7 +23,7 @@ var Desk = function(siteKey, apiKey) {
         .update(salt)
         .digest('binary')
         .substring(0, 16);
-      data = new Buffer(JSON.stringify(hash));
+      data = new Buffer(JSON.stringify(params));
       cipher = crypto.createCipheriv('aes-128-cbc', key, iv);
       multipass = Buffer.concat([iv, cipher.update(data, 'binary'), cipher.final()]);
       multipass = multipass.toString('base64');

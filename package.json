@@ -1,6 +1,6 @@
 {
   "name": "desk-multipass",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Desk.com Multipass SSO",
   "main": "index.js",
   "repository": "git://github.com/alexahn/desk-multipass.git",
