@@ -1,0 +1,9 @@
+{
+  "name": "desk-multipass",
+  "version": "0.0.1",
+  "description": "Desk.com Multipass SSO",
+  "main": "index.js",
+  "repository": "git://github.com/ahn/desk-multipass.git",
+  "author": "Alex Ahn <alexahnhome@gmail.com>",
+  "license": "MIT"
+}
