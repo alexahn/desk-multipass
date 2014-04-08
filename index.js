@@ -10,10 +10,10 @@ var Desk = function(siteKey, apiKey) {
 
   this.create = function (params, callback) {
     var salt, key, iv, data;
-    if (!params.uid) return new Error("Missing 'uid' field");
-    if (!params.expires) return new Error("Missing 'expires' field");
-    if (!params.customer_email) return new Error("Missing 'customer_email' field");
-    if (!params.customer_name) return new Error("Missing 'customer_name' field");
+    if (!params.uid) return callback(new Error("Missing 'uid' field"));
+    if (!params.expires) return callback(new Error("Missing 'expires' field"));
+    if (!params.customer_email) return callback(new Error("Missing 'customer_email' field"));
+    if (!params.customer_name) return callback(new Error("Missing 'customer_name' field"));
     crypto.randomBytes(16, function (err, random) {
       var cipher, multipass, signature;
       if (err) throw err;
