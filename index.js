@@ -6,9 +6,8 @@ var crypto = require('crypto');
  
 var Desk = function(siteKey, apiKey) {
   var self = this;
-  var hash = {};
 
-  this.create = function (params, callback) {
+  self.create = function (params, callback) {
     var salt, key, iv, data;
     if (!params.uid) return callback(new Error("Missing 'uid' field"));
     if (!params.expires) return callback(new Error("Missing 'expires' field"));
@@ -16,7 +15,7 @@ var Desk = function(siteKey, apiKey) {
     if (!params.customer_name) return callback(new Error("Missing 'customer_name' field"));
     crypto.randomBytes(16, function (err, random) {
       var cipher, multipass, signature;
-      if (err) throw err;
+      if (err) return callback(err);
       iv = random;
       salt = apiKey + siteKey;
       key = crypto.createHash('sha1')
