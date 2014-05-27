@@ -6,7 +6,6 @@ var crypto = require('crypto');
  
 var Desk = function(siteKey, apiKey) {
   var self = this;
-
   self.create = function (params, callback) {
     var salt, key, iv, data;
     if (!params.uid) return callback(new Error("Missing 'uid' field"));
@@ -31,9 +30,7 @@ var Desk = function(siteKey, apiKey) {
         .digest('base64');
       callback(null, multipass, signature);
     });
-    
   };
-
 };
 
 module.exports = Desk;
